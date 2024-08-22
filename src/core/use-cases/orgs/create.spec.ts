@@ -3,7 +3,7 @@ import { FakeCepService } from '@/core/services/cep/fake'
 import { BCryptPasswordEnconderService } from '@/core/services/password-encoder/bcrypt'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { CreateOrgUseCase } from './create'
-import { OrgAlreadyExistsError } from '../errors/OrgAlreadyExistsError'
+import { OrgAlreadyExistsError } from '../errors/org-already-exists-error'
 import { CepNotFoundError } from '@/core/services/cep/errors/CepNotFoundError'
 
 let cepService: FakeCepService

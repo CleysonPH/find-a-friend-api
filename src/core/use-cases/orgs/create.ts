@@ -2,7 +2,7 @@ import { OrgRepository } from '@/core/repositories/orgs'
 import { CepService } from '@/core/services/cep'
 import { PasswordEncoderService } from '@/core/services/password-encoder'
 import { Org } from '@prisma/client'
-import { OrgAlreadyExistsError } from '../errors/OrgAlreadyExistsError'
+import { OrgAlreadyExistsError } from '../errors/org-already-exists-error'
 
 export interface CreateOrgUseCaseInput {
   name: string
