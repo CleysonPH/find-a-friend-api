@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
     coverage: {
+      reporter: ['text', 'html', 'clover', 'json', 'lcov'],
       exclude: [
         'node_modules',
         '**/*.spec.ts',
