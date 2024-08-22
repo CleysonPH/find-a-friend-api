@@ -1,5 +1,5 @@
 import { CepNotFoundError } from '@/core/services/cep/errors/CepNotFoundError'
-import { OrgAlreadyExistsError } from '@/core/use-cases/errors/OrgAlreadyExistsError'
+import { OrgAlreadyExistsError } from '@/core/use-cases/errors/org-already-exists-error'
 import { makeCreateOrgUseCase } from '@/core/use-cases/orgs/facotries'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'

@@ -1,7 +1,7 @@
 import { OrgRepository } from '@/core/repositories/orgs'
 import { PasswordEncoderService } from '@/core/services/password-encoder'
 import { Org } from '@prisma/client'
-import { InvalidCredentialsError } from '../errors/InvalidCredentialsError'
+import { InvalidCredentialsError } from '../errors/invalid-credentials-error'
 
 export interface AuthenticateOrgUseCaseInput {
   email: string

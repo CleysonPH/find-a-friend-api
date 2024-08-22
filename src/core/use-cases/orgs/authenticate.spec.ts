@@ -2,7 +2,7 @@ import { InMemoryOrgRepository } from '@/core/repositories/orgs/in-memory-org-re
 import { BCryptPasswordEnconderService } from '@/core/services/password-encoder/bcrypt'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { AuthenticateOrgUseCase } from './authenticate'
-import { InvalidCredentialsError } from '../errors/InvalidCredentialsError'
+import { InvalidCredentialsError } from '../errors/invalid-credentials-error'
 
 let orgRepository: InMemoryOrgRepository
 let passwordEncoderService: BCryptPasswordEnconderService
