@@ -3,4 +3,4 @@ import { apiRoutes } from './api/routes'
 
 export const app = fastify()
 
-app.register(apiRoutes)
+app.register(apiRoutes, { prefix: '/api' })

@@ -9,8 +9,10 @@
     "start:dev": "tsx watch src/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest run --dir src/core/use-cases",
+    "test:watch": "vitest --dir src/core/use-cases",
+    "test:e2e": "vitest run --dir src/api",
+    "test:e2e:watch": "vitest --dir src/api",
     "test:coverage": "vitest run --coverage"
   },
   "keywords": [],
