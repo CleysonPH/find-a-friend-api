@@ -42,6 +42,8 @@ jobs:
       - name: Run tests with coverage
         env:
           DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/find-a-friend?schema=public"
+          JWT_SECRET: c7f5b9fdd6c201d5fb9f61714df2558fbe6ea742b945618a565a830c7dfa1c06
+          JWT_EXPIRES_IN: 10s
         run: npm run test:coverage
 
       - name: SonarCloud Scan
