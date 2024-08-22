@@ -1,4 +1,5 @@
 import { Address, CepService } from '.'
+import { CepNotFoundError } from './errors/CepNotFoundError'
 
 interface ViaCepAddress {
   cep: string
@@ -12,6 +13,7 @@ interface ViaCepAddress {
   gia: string
   ddd: string
   siafi: string
+  erro: boolean
 }
 
 export class ViaCepService implements CepService {
@@ -20,6 +22,10 @@ export class ViaCepService implements CepService {
 
     const response = await fetch(url)
     const body = (await response.json()) as ViaCepAddress
+
+    if (body.erro) {
+      throw new CepNotFoundError()
+    }
 
     return {
       city: body.localidade,
