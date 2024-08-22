@@ -30,5 +30,22 @@ model Org {
   latitude  Decimal
   longitude Decimal
 
+  pets Pet[]
+
   @@map("orgs")
+}
+
+model Pet {
+  id          String @id @default(uuid())
+  name        String
+  about       String
+  age         String
+  size        String
+  energyLevel String @map("energy_level")
+  environment String
+  orgId       String @map("org_id")
+
+  org Org @relation(fields: [orgId], references: [id])
+
+  @@map("pets")
 }
