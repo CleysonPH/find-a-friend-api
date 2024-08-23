@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest run --dir src/core/use-cases",
     "test:watch": "vitest --dir src/core/use-cases",
-    "test:ui": "vitest --dir src/core/use-cases --ui",
+    "test:ui": "vitest --ui",
     "test:e2e": "vitest run --dir src/api",
     "test:e2e:watch": "vitest --dir src/api",
     "test:coverage": "vitest run --coverage"
